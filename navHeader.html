@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Austin Greer" />
+    <meta name="description" content="Navigation" />
+
+    <link href="./styles.css" type="text/css" rel="stylesheet" />
+
+    <style type="text/css">
+        a,
+        a:active,
+        a:link,
+        a:visited {
+            color: white;
+            text-decoration: none;
+        }
+
+        body {
+            background-color: #8491A3;
+            color: #F7FFF6;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 5px;
+            width: 120px;
+        }
+
+        .accordion {
+            background-color: #FFCC00;
+            color: black;
+            cursor: pointer;
+            padding: 10px;
+            margin-bottom: 5px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            transition: 0.4s;
+        }
+
+        .accordion-esc {
+            background-color: #FFCC00;
+            color: black;
+            cursor: pointer;
+            padding: 10px;
+            margin-bottom: 5px;
+            width: 100%;
+            border: none;
+            text-align: center;
+            outline: none;
+            transition: 0.4s;
+        }
+
+        /* border-radius: 5px; */
+
+        .active,
+        .accordion:hover,
+        .accordion-esc:hover,
+        .panel ul li:hover {
+            background-color: #FFCC00;
+            color: black;
+        }
+
+        .accordion:after {
+            content: '\002B';
+            color: tomato;
+            font-weight: bold;
+            float: right;
+        }
+
+        .active:after {
+            content: "\2212";
+        }
+
+        .noScroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .panel {
+            padding: 0px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+        .panel ul li {
+            background-color: #8491A3;
+            border: 1px solid #FFCC00;
+            width: inherit;
+            padding: 5px 10px;
+        }
+
+        /* border-radius: 5px; */
+    </style>
+
+</head>
+
+<div class="noScroll">
+    <!-- Home -->
+    <a href="index.html" alt="Home" target="_parent"><button class="accordion-esc">Home</button></a>
+
+    <h3>HTML/CSS/JavaScript</h3>
+
+    <!-- Drop Down 01 -->
+    <button class="accordion">01 Intro to HTML/CSS/JS</button>
+    <div class="panel">
+        <ul>
+            <a href="01 HTML, CSS, & JavaScript/Page01.html" alt="Page 01">
+                <li>01.01 - HTML/CSS/JS</li>
+            </a>
+            <a href="01 HTML, CSS, & JavaScript/Page02.html" alt="Page 02">
+                <li>01.02 - CSS Directories</li>
+            </a>
+            <a href="01 HTML, CSS, & JavaScript/Page03.html" alt="Page 03">
+                <li>01.03 - JavaScript Directories</li>
+            </a>
+        </ul>
+    </div>
+
+    <!-- Drop Down 02 -->
+    <button class="accordion">02 Web Basics HTML/CSS</button>
+    <div class="panel">
+        <ul>
+            <a href="02 HTML Beginner/Page04.html" alt="Page 04" target="MainFrame">
+                <li>02.04 - Page Layouts</li>
+            </a>
+            <a href="02 HTML Beginner/Page05.html" alt="Page 05" target="MainFrame">
+                <li>02.05 - Semantics & Lists</li>
+            </a>
+            <li>
+                <a href="02 HTML Beginner/Page06.html" alt="Page 06" target="MainFrame">02.06 - Anchors</a> |
+                <a href="02 HTML Beginner/Page06.html#paraB" alt="Page 06" target="MainFrame">#ParaB</a>
+            </li>
+            </a>
+            <a href="02 HTML Beginner/Page07.html" alt="Page 07" target="MainFrame">
+                <li>02.07 - Metadata & Tables</li>
+            </a>
+            <a href="02 HTML Beginner/Page08.html" alt="Page 08" target="MainFrame">
+                <li>02.08 - Images</li>
+            </a>
+            <a href="02 HTML Beginner/Page09.html" alt="Page 09" target="MainFrame">
+                <li>02.09 - Accessability</li>
+            </a>
+        </ul>
+    </div>
+
+    <!-- Drop Down 03 -->
+    <button class="accordion">03 CSS Basics</button>
+    <div class="panel">
+        <ul>
+            <a href="03 CSS Basics/Page10.html" alt="Page 10" target="MainFrame">
+                <li>03.10 - CSS Info</li>
+            </a>
+            <a href="03 CSS Basics/Page11.html" alt="Page 11" target="MainFrame">
+                <li>03.11 - Sans Forgetica</li>
+            </a>
+            <a href="03 CSS Basics/Page12.html" alt="Page 12" target="MainFrame">
+                <li>03.12 - Forms</li>
+            </a>
+        </ul>
+    </div>
+
+    <!-- Drop Down 04-->
+    <button class="accordion">04 JavaScript Basic</button>
+    <div class="panel">
+        <ul>
+            <a href="04 JavaScript Basics/Page13.html" alt="Page 13" target="MainFrame">
+                <li>04.13 - Intro</li>
+            </a>
+            <a href="04 JavaScript Basics/Page14.html" alt="Page 14" target="MainFrame">
+                <li>04.14 - Types & Arrays</li>
+            </a>
+            <a href="04 JavaScript Basics/Page15.html" alt="Page 15" target="MainFrame">
+                <li>04.15 - Program Flow</li>
+            </a>
+            <a href="04 JavaScript Basics/Page16.html" alt="Page 16" target="MainFrame">
+                <li>04.16 - Functions</li>
+            </a>
+            <a href="04 JavaScript Basics/Page17.html" alt="Page 17" target="MainFrame">
+                <li>04.17 - Objects</li>
+            </a>
+            <a href="04 JavaScript Basics/Page18.html" alt="Page 18" target="MainFrame">
+                <li>04.18 - Programming for Web Pages</li>
+            </a>
+            <a href="04 JavaScript Basics/Blackjack.html" alt="Blackjack" target="MainFrame">
+                <li>Blackjack</li>
+            </a>
+        </ul>
+    </div>
+
+    <!-- Javascript for accordian dropdowns -->
+    <script type="text/javascript">
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+</div>
+
+</html>

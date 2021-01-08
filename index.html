@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Austin Greer" />
+    <meta name="description" content="Austin\'s Test Dev Website" />
+
+    <title>Austin Greer Fitness</title>
+
+    <!-- displays site properly based on user's device -->
+    <link rel="icon" href="./img/logos.png" type="image/png" sizes="32x32" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bai+Jamjuree:400,600&display=swap">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js" language="javascript">
+        $(function () {
+            var includes = $('[data-include]');
+            jQuery.each(includes, function () {
+                var file = 'views/' + $(this).data('include') + '.html';
+                $(this).load(file);
+            });
+        });
+    </script>
+    
+    <script src="header.js"></script>
+
+    <script>
+        $(function () {
+            $("#navH").load("navHeader.html");
+        });
+    </script>
+    
+    <script>
+        $(function () {
+            $("#body").load("indexBody.html");
+        });
+    </script>
+    
+    <script>
+        $(function () {
+            $("#navF").load("navFooter.html");
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="navH"></div>
+
+    <div id="body"></div>
+
+    <div id="navF"></div>
+
+    <script src="main.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+</body>
+
+</html>

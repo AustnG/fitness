@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Austin's Fitness</title>
+    <meta name="author" content="Austin Greer" />
+    <meta name="description" content="Fitness Data" />
+
+    <link href="./styles.css" type="text/css" rel="stylesheet" />
+
+    <style type="text/css">
+        table,
+        table tr,
+        table td {
+            border: 1px solid black;
+        }
+
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 3%;
+            right: 3%;
+            z-index: 99;
+            font-size: 10px;
+            border: none;
+            outline: none;
+            background-color: #FFCC00;
+            color: black;
+            cursor: pointer;
+            padding: 10px 20px;
+        }
+
+        #myBtn:hover {
+            background-color: tomato;
+        }
+    </style>
+
+    <script type="text/javascript">
+        // When the user scrolls down 'x'px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+    </header>
+
+    <main>
+
+        <!--
+        <div class='backgroundPlus'>
+            &nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br/><br/><br/>
+            &nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br/><br/><br/>
+            &nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br/><br/><br/>
+            &nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br/><br/><br/>
+            &nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br/><br/><br/>
+            &nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br/><br/><br/>
+            &nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br/><br/><br/>
+            &nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br/><br/><br/>
+            &nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br/><br/><br/>
+            &nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br/><br/><br/>
+            &nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br/><br/><br/>
+            &nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br/><br/><br/>
+            &nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br/><br/><br/>
+            &nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br/><br/><br/>
+            &nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br/><br/><br/>
+            &nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br/><br/><br/>
+            &nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br/><br/><br/>
+            &nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br/><br/><br/>
+            &nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br/><br/><br/>
+            &nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br/><br/><br/>
+            &nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br/><br/><br/>
+        </div> -->
+
+        <!-- Return to Top Button -->
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+        <div class="center">
+            user://austin_<b>GREER</b>
+        </div>
+
+        <div>
+            <table style="margin: 50px auto;">
+                <caption>Site Hex Values</caption>
+                <tr>
+                    <td>Name</td>
+                    <td>Hex Code</td>
+                    <td>Color</td>
+                </tr>
+                <tr>
+                    <td>Mint Cream</td>
+                    <td>#F7FFF6</td>
+                    <td style="background-color: #F7FFF6;"></td>
+                </tr>
+                <tr>
+                    <td>Magic Mint</td>
+                    <td>#BCEBCB</td>
+                    <td style="background-color: #BCEBCB;"></td>
+                </tr>
+                <tr>
+                    <td>Dark Sea Green</td>
+                    <td>#87D68D</td>
+                    <td style="background-color: #87D68D;"></td>
+                </tr>
+                <tr>
+                    <td>Foliage Green</td>
+                    <td>#93B48B</td>
+                    <td style="background-color: #93B48B;"></td>
+                </tr>
+                <tr>
+                    <td>Gray Blue</td>
+                    <td>#8491A3</td>
+                    <td style="background-color: #8491A3;"></td>
+                </tr>
+                <tr>
+                    <td>Warning Yellow</td>
+                    <td>#FFCC00</td>
+                    <td style="background-color: #FFCC00;"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="center">
+            <span class="center" style="font-weight: bolder;">Persistence, <i>not</i> intelligence, will determine your
+                success (in this industry).</span>
+        </div>
+
+        <!-- Start Banner -->
+        <div class="banner">
+            <img src="img/logo.svg" alt="" class="logo" />
+            <h1 id="header" class="banner-header"></h1>
+            <p id="header2" class="banner-paragraph"></p>
+
+            <p>HELLO</p>
+
+            <!--
+                            <div class="button-box">
+                                <a href="#"><button class="ios-button">Copy-edit</button></a>
+                                <a href="#"><button class="mac-button">Revise</button></a>
+                                <a href="fitness/index2.html"><button class="mac-button">To page 2</button></a>
+                            </div>
+                            -->
+        </div>
+
+
+        <!-- Start Section One: Keep track of your snippets -->
+        <section class="feature">
+            <div class="intro-text">
+                <h3 id="body"></h3>
+                <p id="body2"></p>
+            </div>
+
+            <div class="track-snippets">
+                <div class="snippet-left"><img src="img/image-computer.png" alt="computer" /></div>
+                <div class="snippet-right">
+                    <div>
+                        <h4 id="body3"></h4>
+                        <p id="body4"></p>
+                    </div>
+                    <div>
+                        <h4 id="body5"></h4>
+                        <p id="body6"></p>
+                    </div>
+                    <div>
+                        <h4 id="body7"></h4>
+                        <p id="body8"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Start Section Two: Access Clipboard anywhere -->
+        <section class="feature access-clipboard">
+            <div class="intro-text">
+                <h3 id="body9"></h3>
+                <p id="body10"></p>
+            </div>
+            <div>
+                <img src="img/image-devices.png" alt="devices" />
+            </div>
+        </section>
+
+        <!-- Start Section Three: Supercharge your workflow -->
+        <section class="feature supercharge-workflow">
+            <div class="intro-text">
+                <h3 id="body11"></h3>
+                <p id="body12"></p>
+            </div>
+            <div class="columns">
+                <div class="col create-blacklists">
+                    <img src="img/icon-blacklist.svg" alt="" />
+                    <h4 id="body13"></h4>
+                    <p id="body14"></p>
+                </div>
+                <div class="col plain-snippets">
+                    <img src="img/icon-text.svg" alt="" />
+                    <h4 id="body15"> </h4>
+                    <p id="body16"></p>
+                </div>
+                <div class="col sneak-preview">
+                    <img src="img/icon-preview.svg" alt="" />
+                    <h4 id="body17" </h4>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>
