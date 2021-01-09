@@ -1,18 +1,16 @@
-// Sharing link
-//var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1VlkjhoLrLlZYoX6ctCNJs8eJ8EXEMeTSgIPR6joZP_8/edit?usp=sharing';
-
-// Copied from URL
-var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1VlkjhoLrLlZYoX6ctCNJs8eJ8EXEMeTSgIPR6joZP_8/edit#gid=0';
-
+//var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1VlkjhoLrLlZYoX6ctCNJs8eJ8EXEMeTSgIPR6joZP_8/edit#gid=0';
+var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1VlkjhoLrLlZYoX6ctCNJs8eJ8EXEMeTSgIPR6joZP_8/';
 
 function init() {
-  Tabletop.init( {key: publicSpreadsheetUrl,
-                  callback: showInfo,
-                  simpleSheet: true } )
+  Tabletop.init({
+    key: publicSpreadsheetUrl,
+    callback: showInfo,
+    simpleSheet: true
+  })
 }
 
 function showInfo(data, tabletop) {
-  data.forEach(function(data) {
+  data.forEach(function (data) {
     body01.innerHTML = data.body01;
     body02.innerHTML = data.body02;
     body03.innerHTML = data.body03;
@@ -24,7 +22,7 @@ function showInfo(data, tabletop) {
     body09.innerHTML = data.body09;
     body10.innerHTML = data.body10;
     body11.innerHTML = data.body11;
- });
+  });
 }
 
 window.addEventListener('DOMContentLoaded', init)
