@@ -1,4 +1,3 @@
-//var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1VlkjhoLrLlZYoX6ctCNJs8eJ8EXEMeTSgIPR6joZP_8/edit#gid=0';
 var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1VlkjhoLrLlZYoX6ctCNJs8eJ8EXEMeTSgIPR6joZP_8/';
 
 function init() {
@@ -11,17 +10,16 @@ function init() {
 
 function showInfo(data, tabletop) {
   data.forEach(function (data) {
-    body01.innerHTML = data.body01;
-    body02.innerHTML = data.body02;
-    body03.innerHTML = data.body03;
-    body04.innerHTML = data.body04;
-    body05.innerHTML = data.body05;
-    body06.innerHTML = data.body06;
-    body07.innerHTML = data.body07;
-    body08.innerHTML = data.body08;
-    body09.innerHTML = data.body09;
-    body10.innerHTML = data.body10;
-    body11.innerHTML = data.body11;
+    data01.innerHTML = data.data01;
+    data02.innerHTML = data.data02;
+    data03.innerHTML = data.data03;
+    data04.innerHTML = data.data04;
+    data05.innerHTML = data.data05;
+    data06.innerHTML = data.data06;
+    data07.innerHTML = data.data07;
+    data08.innerHTML = data.data08;
+    data09.innerHTML = data.data09;
+    data10.innerHTML = data.data10;
   });
 }
 
