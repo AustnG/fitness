@@ -55,8 +55,7 @@
 
   <!-- Top container -->
   <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
-    <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i
-        class="fa fa-bars"></i>  Menu</button>
+    <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
     <span class="w3-bar-item w3-right">Logo</span>
   </div>
 
@@ -114,6 +113,35 @@
       </div>
     </div>
 
+    <div class="w3-container w3-margin-bottom">
+      <div class="w3-row">
+        <div class="w3-col w3-container w3-blue" style="width:12.5%;">
+          <p>12.5%</p>
+        </div>
+        <div class="w3-col w3-container w3-green" style="width:12.5%;">
+          <p>12.5%</p>
+        </div>
+        <div class="w3-col w3-container w3-blue" style="width:12.5%;">
+          <p>12.5%</p>
+        </div>
+        <div class="w3-col w3-container w3-green" style="width:12.5%;">
+          <p>12.5%</p>
+        </div>
+        <div class="w3-col w3-container w3-blue" style="width:12.5%;">
+          <p>12.5%</p>
+        </div>
+        <div class="w3-col w3-container w3-green" style="width:12.5%;">
+          <p>12.5%</p>
+        </div>
+        <div class="w3-col w3-container w3-blue" style="width:12.5%;">
+          <p>12.5%</p>
+        </div>
+        <div class="w3-col w3-container w3-green" style="width:12.5%;">
+          <p>12.5%</p>
+        </div>
+      </div>
+    </div>
+
     <div class="w3-container">
       -Current week's workouts<br />
       -Chart/Graph - Activity Days by Month<br />
@@ -153,7 +181,7 @@
     </div>
 
     <div class="w3-container">
-    Persistence, <i>not</i> intelligence, will determine your success (in this industry).
+      Persistence, <i>not</i> intelligence, will determine your success (in this industry).
       <table style="margin: 50px auto">
         <caption>
           Site Hex Values
@@ -194,6 +222,15 @@
           <td style="background-color: #ffcc00"></td>
         </tr>
       </table>
+    </div>
+
+    <!-- Progress Bar -->
+    <h2 class="w3-center">Progress Bars</h2>
+    <div class="w3-container">
+      <div class="w3-white">
+        <div id="myBar" class="w3-center w3-padding w3-theme" style="width:5%; background-color:#FFCC00; color:white;">5%</div>
+      </div><br>
+      <button class="w3-btn w3-theme" onclick="move()">Click Me</button>
     </div>
 
     <div class="w3-panel">
@@ -340,9 +377,23 @@
 
   </div>
 
-
-
-
+  <!-- Progress Bar script -->
+  <script>
+    function move() {
+      var elem = document.getElementById("myBar");
+      var width = 5;
+      var id = setInterval(frame, 10);
+      function frame() {
+        if (width == 100) {
+          clearInterval(id);
+        } else {
+          width++;
+          elem.style.width = width + '%';
+          elem.innerHTML = width * 1 + '%';
+        }
+      }
+    }
+  </script>
 
 </body>
 
