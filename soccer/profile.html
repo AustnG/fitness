@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <style>
+    #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 3%;
+      right: 3%;
+      z-index: 99;
+      font-size: 10px;
+      border: none;
+      outline: none;
+      background-color: #ffcc00;
+      color: black;
+      cursor: pointer;
+      padding: 10px 20px;
+    }
+
+    #myBtn:hover {
+      background-color: tomato;
+    }
+  </style>
+
+  <script type="text/javascript">
+    // When the user scrolls down 'x'px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 100 ||
+        document.documentElement.scrollTop > 100
+      ) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+</head>
+
+<body class="w3-light-grey">
+
+  <!-- Return to Top Button -->
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+  <!-- Top container -->
+  <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+    <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i
+        class="fa fa-bars"></i>  Menu</button>
+    <span class="w3-bar-item w3-right">Logo</span>
+  </div>
+
+
+
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-top:43px;">
+
+    <!-- Header -->
+    <header class="w3-container" style="padding-top:22px">
+      <h5><b><i class="fa fa-futbol-o"></i> My Soccer Profile</b></h5>
+    </header>
+
+    <!-- Format
+    <div class="w3-container">
+      
+    </div>
+    <hr>
+    -->
+
+    <!--
+    <div class="w3-row-padding w3-margin-bottom">
+      <div class="w3-quarter">
+        <div class="w3-container w3-red w3-padding-16">
+          <div class="w3-left"><i class="fa fa-comment w3-xxxlarge"></i></div>
+          <div class="w3-right">
+            <h3>52</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>Messages</h4>
+        </div>
+      </div>
+      <div class="w3-quarter">
+        <div class="w3-container w3-blue w3-padding-16">
+          <div class="w3-left"><i class="fa fa-eye w3-xxxlarge"></i></div>
+          <div class="w3-right">
+            <h3>99</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>Views</h4>
+        </div>
+      </div>
+      <div class="w3-quarter">
+        <div class="w3-container w3-teal w3-padding-16">
+          <div class="w3-left"><i class="fa fa-share-alt w3-xxxlarge"></i></div>
+          <div class="w3-right">
+            <h3>23</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>Shares</h4>
+        </div>
+      </div>
+      <div class="w3-quarter">
+        <div class="w3-container w3-orange w3-text-white w3-padding-16">
+          <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
+          <div class="w3-right">
+            <h3>50</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>Users</h4>
+        </div>
+      </div>
+    </div>
+  -->
+
+    &nbsp;
+    <div class="w3-container">
+      <p>Club & School Teams:<br/>
+        [] Wolves<br/>
+        [1997-2007] SKY FC '91 - Bowling Green, KY - Center Midfielder<br/>
+        [2002-2004] BGJHS - Bowling Green, KY - Center Midfielder<br/>
+        [2004-2009] BGHS - Bowling Green, KY - Center Midfielder<br/>
+        [2007-2009] ODP KY State & Regional Pool - Center Midfielder<br/>
+        [2007-2009] Javanon FC '91 - Louisville, KY: - Outside Midfielder/Striker<br/>
+        [2009-2013] Centre College - Danville, KY - Left Midfielder<br/>
+        [2014-2020] Bowling Green Adult League - Bowling Green, KY - Midfielder/Outside Back<br/>
+        [2014-2020] BG Parks & Rec Futsol League - Bowling Green, KY - Midfielder<br/>
+        <br/>
+        <br/>
+        <br/>
+        Accolades<br/>
+        SKY '91:<br/>
+        Club Team Co-Captain for '91 squad<br/>
+        <br/>
+        Javanon '91:<br/>
+        2009 State and Region II Champions and the 2009 National Runners-up<br/>
+        <br/>
+        Bowling Green High School:<br/>
+        -Lettered in Varsity soccer at BGHS in 2005, 2006, 2007, & 2009<br/>
+        -KHSAA State Champions 2006, Final Four 2005 & 2007<br/>
+        -2008 Boys District 8 All-Tournament Team and 2008 2nd Team All-State, Captain 2008, MVP, Most Goals and Assists
+        Award<br/>
+        -2007 110% Award<br/>
+        -2006 Had the assist on the winning goal in the 2006 State Championship Game<br/>
+        <br/>
+        Centre Soccer:<br/>
+        Career stats: 63 appearances, 2 goals, 7 assists<br/>
+        2012 - NCAA Div III Tournament Round 1 & 2 Competitor, Honorable Mention All-SAA
+      </p>
+      <br/>
+      <br/>
+      <br/>
+      <p id="data01"></p>
+      <p id="data02"></p>
+      <p id="data03"></p>
+      <p id="data04"></p>
+      <p id="data05"></p>
+      <p id="data06"></p>
+      <p id="data07"></p>
+      <p id="data08"></p>
+      <p id="data09"></p>
+      <p id="data10"></p>
+    </div>
+
+    <div class="w3-container">
+      <h5>General Stats</h5>
+      <p>New Visitors</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-center w3-padding w3-green" style="width:25%">+25%</div>
+      </div>
+
+      <p>New Users</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-center w3-padding w3-orange" style="width:50%">50%</div>
+      </div>
+
+      <p>Bounce Rate</p>
+      <div class="w3-grey">
+        <div class="w3-container w3-center w3-padding w3-red" style="width:75%">75%</div>
+      </div>
+    </div>
+    <hr>
+
+
+
+</body>
+
+</html>
