@@ -20,6 +20,7 @@ function showInfo(data, tabletop) {
     data08.innerHTML = data.data08;
     data09.innerHTML = data.data09;
     data10.innerHTML = data.data10;
+    data11.innerHTML = data.data11;
   });
 }
 

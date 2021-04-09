@@ -45,7 +45,7 @@
                     Dashboard</a>
                 
                 <!-- Accordian -->
-                <a onclick="myAccFunc('acc1')" class="w3-bar-item w3-button w3-padding"><i class="fa fa fa-book fa-fw"></i>  Log</a>
+                <a onclick="accordionToggle('acc1')" class="w3-bar-item w3-button w3-padding"><i class="fa fa fa-book fa-fw"></i>  Log</a>
                 <div id="acc1" class="w3-hide">
                     <a href="" class="w3-bar-item w3-button">Submit Workout</a>
                     <a href="" class="w3-bar-item w3-button">Random Workout</a>
@@ -56,16 +56,16 @@
                 <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bolt fa-fw"></i>  Hero WODs</a> <!-- fa-flag // fa-trophy // fas fa-dumbbell //fa-universal-access -->
 
                 <!-- Accordian -->
-                <a onclick="myAccFunc('acc2')" class="w3-bar-item w3-button w3-padding"><i class="fa fa-globe fa-fw"></i> Competitions</a>
+                <a onclick="accordionToggle('acc2')" class="w3-bar-item w3-button w3-padding"><i class="fa fa-globe fa-fw"></i> Competitions</a>
                 <div id="acc2" class="w3-hide">
-                    <a href="" class="w3-bar-item w3-button">2020 Kickin' It Oldschool</a>
-                    <a href="" class="w3-bar-item w3-button">2020 Open</a>
-                    <a href="" class="w3-bar-item w3-button">2019 Open</a>
-                    <a href="" class="w3-bar-item w3-button">2019 Crossfitting 4 Cures</a>
+                    <a href="" class="w3-bar-item w3-button">  2020 Kickin' It Oldschool</a>
+                    <a href="" class="w3-bar-item w3-button">  2020 Open</a>
+                    <a href="" class="w3-bar-item w3-button">  2019 Open</a>
+                    <a href="" class="w3-bar-item w3-button">  2019 Crossfitting 4 Cures</a>
                     <a href="" class="w3-bar-item w3-button">2018 Open</a>
                 </div>
 
-                <a href="/soccer/index.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-futbol-o fa-fw"></i>  Soccer Profile</a>
+                <a href="/fitness/soccer/index.html" class="w3-bar-item w3-button w3-padding" onclick=""><i class="fa fa-futbol-o fa-fw"></i>  Soccer Profile</a>
 
                 <!-- <a href="" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i> Settings</a> -->
 
@@ -106,7 +106,7 @@
 
     <!-- Accordians -->
     <script>
-        function myAccFunc(id) {
+        function accordionToggle(id) {
             var x = document.getElementById(id);
             if (x.className.indexOf("w3-show") == -1) {
                 x.className += " w3-show";
