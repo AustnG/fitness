@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Soccer Profile</title>
+    <meta name="author" content="Austin Greer" />
+    <meta name="description" content="Soccer Profile" />
+
+    <link rel="icon" href="" type="image/png" sizes="32x32" />
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bai+Jamjuree:400,600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <script src="../js/main.js" defer></script>
+
+</head>
+
+<body class="w3-light-grey">
+
+    <!-- Sidebar/menu -->
+    <div class="w3-main" style="margin-top:43px;">
+
+        <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+            <div class="w3-container w3-row">
+                <div class="w3-col s4">
+                    <img src="/img/Austin.jpg" class="w3-circle w3-margin-right" style="width:46px">
+                </div>
+                <div class="w3-col s8 w3-bar">
+                    <h3>Soccer Profile</h3><br>
+                    <!-- Austin's Fitness -->
+                    <a href="/" class="w3-bar-item w3-button"><i class="fa fa-home"></i></a>
+                    <a href="#" class="w3-bar-item w3-button"><i class="fa fa-futbol-o"></i></a>
+                    <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a>
+                </div>
+            </div>
+            <hr>
+
+            <div class="w3-bar-block">
+                <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+
+                <!-- Accordian -->
+                <a onclick="accordionToggle('acc1')" class="w3-bar-item w3-button w3-padding"><i class="fa fa-futbol-o fa-fw"></i> Clubs</a>
+                <div id="acc1" class="w3-hide">
+                    <ul>
+                        <li><a href="#" class="w3-bar-item w3-button"> 1995-1997 Wolves</a></li>
+                        <li><a href="#" class="w3-bar-item w3-button"> 1997-2007 SKY FC</a></li>
+                        <li><a href="#" class="w3-bar-item w3-button"> 2002-2004 BGJHS Purples</a></li>
+                        <li><a href="#" class="w3-bar-item w3-button"> 2004-2009 BGHS Purples</a></li>
+                        <li><a href="#" class="w3-bar-item w3-button"> 2007-2009 KY ODP State &amp; Regional</a></li>
+                        <li><a href="#" class="w3-bar-item w3-button"> 2007-2009 Javanon FC</a></li>
+                        <li><a href="#" class="w3-bar-item w3-button"> 2009-2013 Centre College</a></li>
+                        <li><a href="#" class="w3-bar-item w3-button"> 2014-2020 BG Adult Soccer</a></li>
+                        <li><a href="#" class="w3-bar-item w3-button"> 2014-2020 Parks &amp; Rec Futsol</a></li>
+                        <li><a href="#" class="w3-bar-item w3-button"> 2021-2021 BGFC Golden Lions</a></li>
+                    </ul>
+                </div>
+
+                <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-trophy fa-fw"></i>  Awards</a>
+                <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-flag fa-fw"></i>  Something</a>
+            </div>
+        </nav>
+
+        <!-- Overlay effect when opening sidebar on small screens -->
+        <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    </div>
+
+    <!-- Return to 'Top' Button -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <!-- Top container -->
+    <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+        <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i> Menu</button>
+        <span class="w3-bar-item w3-right">Austin Greer</span>
+    </div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+        <!-- Header -->
+        <header class="w3-container" style="padding-top:22px">
+            <h5><b><i class="fa fa-futbol-o"></i> Soccer Profile</b></h5>
+        </header>
+
+        <div class="w3-container">
+            <p>Club &amp; School Teams:<br> [1995-1997] Wolves<br> [1997-2007] SKY FC '91 - Bowling Green, KY - Center Midfielder<br> [2002-2004] BGJHS - Bowling Green, KY - Center Midfielder<br> [2004-2009] BGHS - Bowling Green, KY - Center Midfielder<br>                [2007-2009] ODP KY State &amp; Regional Pool - Center Midfielder<br> [2007-2009] Javanon FC '91 - Louisville, KY: - Outside Midfielder/Striker<br> [2009-2013] Centre College - Danville, KY - Left Midfielder<br> [2014-2020] Bowling Green
+                Adult League - Bowling Green, KY - Midfielder/Outside Back<br> [2014-2020] BG Parks &amp; Rec Futsol League - Bowling Green, KY - Midfielder<br> [2021-2021] BGFC Golden Lions - Bowling Green, KY - Outside Mid/Defense
+                <br>
+                <br>
+                <br> Accolades
+                <br> SKY '91:<br> Club Team Co-Captain for '91 squad<br>
+                <br> Javanon '91:<br> 2009 State and Region II Champions and the 2009 National Runners-up<br>
+                <br> Bowling Green High School:<br> -Lettered in Varsity soccer at BGHS in 2005, 2006, 2007, &amp; 2009<br> -KHSAA State Champions 2006, Final Four 2005 &amp; 2007<br> -2008 Boys District 8 All-Tournament Team and 2008 2nd Team All-State,
+                Captain 2008, MVP, Most Goals and Assists Award
+                <br> -2007 110% Award<br> -2006 Had the assist on the winning goal in the 2006 State Championship Game<br>
+                <br> Centre Soccer:<br> Career stats: 63 appearances, 2 goals, 7 assists<br> 2012 - NCAA Div III Tournament Round 1 &amp; 2 Competitor, Honorable Mention All-SAA<br>
+                <br> BGFC Golden Lions:<br> Career stats: 4 appearances
+            </p>
+        </div>
+
+        <!-- Stats? -->
+        <!-- <div class="w3-container">
+            <h5>General Stats</h5>
+            <p>New Visitors</p>
+            <div class="w3-grey">
+                <div class="w3-container w3-center w3-padding w3-green" style="width:25%">+25%</div>
+            </div>
+
+            <p>New Users</p>
+            <div class="w3-grey">
+                <div class="w3-container w3-center w3-padding w3-orange" style="width:50%">50%</div>
+            </div>
+
+            <p>Bounce Rate</p>
+            <div class="w3-grey">
+                <div class="w3-container w3-center w3-padding w3-red" style="width:75%">75%</div>
+            </div>
+        </div> -->
+        <hr>
+
+        <!-- Menu script -->
+        <script>
+            // Get the Sidebar
+            var mySidebar = document.getElementById("mySidebar");
+
+            // Get the DIV with overlay effect
+            var overlayBg = document.getElementById("myOverlay");
+
+            // Toggle between showing and hiding the sidebar, and add overlay effect
+            function w3_open() {
+                if (mySidebar.style.display === 'block') {
+                    mySidebar.style.display = 'none';
+                    overlayBg.style.display = "none";
+                } else {
+                    mySidebar.style.display = 'block';
+                    overlayBg.style.display = "block";
+                }
+            }
+
+            // Close the sidebar with the close button
+            function w3_close() {
+                mySidebar.style.display = "none";
+                overlayBg.style.display = "none";
+            }
+        </script>
+
+        <!-- Accordians -->
+        <script>
+            function accordionToggle(id) {
+                var x = document.getElementById(id);
+                if (x.className.indexOf("w3-show") == -1) {
+                    x.className += " w3-show";
+                } else {
+                    x.className = x.className.replace(" w3-show", "");
+                }
+            }
+        </script>
+
+        <!-- Progress Bar script -->
+        <script>
+            function move() {
+                var elem = document.getElementById("myBar");
+                var width = 5;
+                var id = setInterval(frame, 10);
+
+                function frame() {
+                    if (width == 100) {
+                        clearInterval(id);
+                    } else {
+                        width++;
+                        elem.style.width = width + '%';
+                        elem.innerHTML = width * 1 + '%';
+                    }
+                }
+            }
+        </script>
+
+        <script src="main.js"></script>
+
+</body>
+
+</html>
