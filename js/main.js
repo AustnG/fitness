@@ -1,6 +1,7 @@
 //
 // Import data from Google Sheet
 //
+
 var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1VlkjhoLrLlZYoX6ctCNJs8eJ8EXEMeTSgIPR6joZP_8/';
 
 function init() {
